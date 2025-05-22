@@ -1,0 +1,234 @@
+body{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/* Title */
+.title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+/* Grid Layout */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px;
+}
+
+@media (min-width: 640px) {
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 768px) {
+    .product-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .product-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Product Card */
+.product-card {
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.product-card:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-8px);
+}
+
+/* Image */
+.product-image {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+    transform: scale(1.05);
+}
+
+/* Product Info */
+.product-info {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+}
+
+/* Product Name */
+.product-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Product Details */
+.product-details {
+    font-size: 0.875rem;
+    color: #6B7280;
+    margin-bottom: 8px;
+}
+
+/* Product Price */
+.product-price {
+    color: #EF4444;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+
+/* Add to Cart Button */
+.add-to-cart-btn {
+    background-color: #3B82F6;
+    color: white;
+    padding: 10px 16px;
+    border-radius: 8px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #2563EB;
+}
+
+/* Cart Icon */
+.cart-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.navbar {
+    background-color: #111827; /* gray-900 */
+    padding: 15px 0;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #e5e7eb; /* gray-200 */
+    font-weight: 500;
+    transition: color 0.3s;
+    font-weight: bold;
+}
+
+.nav-links li a:hover {
+    color: #60a5fa; /* blue-400 */
+}
+
+.nav-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.login-btn {
+    background-color: #1f2937; /* gray-800 */
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #f9fafb; /* gray-50 */
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #374151; /* gray-700 */
+}
+
+.cart-icon {
+    font-size: 20px;
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* footer */
+
+.footer {
+    background-color: #111827; /* Nền đen */
+    color: #d1d5db; /* text-gray-300 */
+    padding: 40px 20px 20px;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.footer h3, .footer h4 {
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.footer a {
+    color: #d1d5db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #60a5fa; /* blue-400 */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    border-top: 1px solid #374151; /* gray-700 */
+    padding-top: 10px;
+    font-size: 13px;
+    color: #9ca3af; /* gray-400 */
+}
+
